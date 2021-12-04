@@ -54,13 +54,11 @@ def moveThroughPoints(waypoints, th=0.07, loop=False, recordFn=None):
         target = np.array(waypoints[idx])
         curr = np.array([pos.a1, pos.a2, pos.a3, pos.a4, pos.a5, pos.a6, pos.a7])
         if np.linalg.norm(target - curr) < th:
-            idx += 1
-            if idx >= len(waypoints):
-                if loop:
-                    idx = 0
-                else:
-                    sub.unregister()
-                    return
+            idx = idx + 1 if idx + 1 < len(waypoints) else 0
+            if idx == 0 and not loop:
+                sub.unregister()
+                rospy.loginfo('Done!')
+                return
 
         # Publish command
         a1, a2, a3, a4, a5, a6, a7 = waypoints[idx]
@@ -78,7 +76,7 @@ def moveThroughPoints(waypoints, th=0.07, loop=False, recordFn=None):
         # print(rospy.get_name() + ": I sent \"%s\"" % pub_joint_position.position)
 
     # Send desired joint positions
-    pub = rospy.Publisher('/iiwa/command/JointPosition', JointPosition, queue_size=10)
+    pub = rospy.Publisher('/iiwa/command/JointPosition', JointPosition, queue_size=1)
     # Listen to joint states
     sub = rospy.Subscriber('/iiwa/state/JointPosition', JointPosition, callback)
     # Track AR tag positions
@@ -94,12 +92,7 @@ if __name__ == '__main__':
     rospy.init_node('talker', anonymous=True)
 
     try:
-        # pts = np.load('waypoints.npy')
-        pts = np.array([
-            [-0.85, -36.99, -2.42, 36.47, 3.54, -0.7, -1.49],
-            [-0.85, -36.99, -2.42, 36.47, 3.54, -38.16, -1.49],
-            [-0.85, -36.99, -2.42, 36.47, 3.54, -0.7, -1.49]
-        ]) * np.pi / 180
+        pts = np.load('waypoints.npy')
         moveThroughPoints(pts, recordFn=recordTags(
             'ar_marker_6',
             ['ar_marker_0', 'ar_marker_1', 'ar_marker_2', 'ar_marker_3', 'ar_marker_4', 'ar_marker_5']
@@ -107,8 +100,19 @@ if __name__ == '__main__':
         
         # Save results
         # NOTE: Positions are relative to the base AR tag, not the robot base!
+        # Current Issues:
+        # 1. Only collects a few datapoints
+        #  - Do the motion slower
+        #  - Collect raw images and process offline? (Camera is 30fps I think, so this would be 300 frames for a 10 sec motion)
+        # 2. Timesteps between collected points not constant
+        #  - Try interpolating
+        # 3. Some timesteps have missing data for some AR tags
+        #  - Calculate loss scaled off of number of seen points
+        # 4. Global vs. magazine frame
+        #  - We think it'd be easier to do everything relative to a position on the magazine
         out_file = sys.argv[1] if 1 < len(sys.argv) else 'log.json'
         with open(out_file, 'w') as f:
             f.write(json.dumps(log, indent=4))
+        print("Recorded tag positions {} times".format(len(log.keys())))
     except rospy.ROSInterruptException:
         pass
