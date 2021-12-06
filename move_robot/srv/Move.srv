@@ -1,0 +1,6 @@
+string waypoints
+int64 control_freq
+---
+string status
+int64 start_nsec
+int64 end_nsec
