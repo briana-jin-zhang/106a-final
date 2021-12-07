@@ -1,0 +1,2 @@
+set(realsense2_camera_MESSAGE_FILES "/home/yiliu77/Desktop/Class/Semester7/EECS106A/project/realsense/src/realsense-ros/realsense2_camera/msg/IMUInfo.msg;/home/yiliu77/Desktop/Class/Semester7/EECS106A/project/realsense/src/realsense-ros/realsense2_camera/msg/Extrinsics.msg;/home/yiliu77/Desktop/Class/Semester7/EECS106A/project/realsense/src/realsense-ros/realsense2_camera/msg/Metadata.msg")
+set(realsense2_camera_SERVICE_FILES "/home/yiliu77/Desktop/Class/Semester7/EECS106A/project/realsense/src/realsense-ros/realsense2_camera/srv/DeviceInfo.srv")
