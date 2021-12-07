@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="move_robot" type="close_gripper.py" name="close_gripper.py"></node>
+  <node pkg="move_robot" type="please_move_slow.py" name="please_move_slow.py"></node>
+  <node pkg="move_robot" type="open_gripper.py" name="open_gripper.py"></node>
+</launch>

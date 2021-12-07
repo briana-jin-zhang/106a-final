@@ -1,0 +1,27 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="waypoints" default="waypoints_new.npy" />
+  <arg name="control_freq" default="20" />
+  <arg name="out_dir" default="output" />
+  <arg name="flags" default="" />
+
+  <!-- Launch Camera -->
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="1280" />
+    <param name="image_height" value="720" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+
+  <!-- Move and Collect Data -->
+  <node pkg="move_robot" type="move_server.py" name="move_server"></node>
+  <node pkg="move_robot" type="move_and_collect.py" name="move_and_collect" output="screen" required="true"
+    args="
+      -w $(find move_robot)/src/$(arg waypoints)
+      -c $(arg control_freq)
+      -o $(find move_robot)/src/$(arg out_dir)
+      $(arg flags)
+  "></node>
+</launch>
