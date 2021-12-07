@@ -22,70 +22,34 @@
         		<site name="anchor_right" pos="-0.017 0.03 0.0"/>
         		
         		<body name="object0">
-		    		<geom name="geom0" size="0.01 0.3" pos="0 0.1 0" type="cylinder" rgba="1 1 1 1" group="0"/>
+		    		<geom name="geom0" size="0.01 0.275" pos="0 0.1 0" type="cylinder" rgba="1 1 1 1" group="0"/>
 		    		<site name="site0_left" pos="0.017 0.1 0.0"/>
 		    		<site name="site0_right" pos="-0.017 0.1 0.0"/>
 					<body name="object1">
-						<geom name="geom1" size="0.01 0.3" pos="0 0.14 0" type="cylinder" rgba="1 1 1 1" group="0"/>
+						<geom name="geom1" size="0.01 0.275" pos="0 0.14 0" type="cylinder" rgba="1 1 1 1" group="0"/>
 						<joint name="joint0" pos="0 0.10 0" class="cloth_joint"/>
 						<site name="site1_left" pos="0.017 0.14 0.0"/>
 						<site name="site1_right" pos="-0.017 0.14 0.0"/>
 						<body name="object2">
-							<geom name="geom2" size="0.01 0.3" pos="0 0.18 0" type="cylinder" rgba="1 1 1 1" group="0"/>
+							<geom name="geom2" size="0.01 0.275" pos="0 0.18 0" type="cylinder" rgba="1 1 1 1" group="0"/>
 							<joint name="joint1" pos="0 0.14 0" class="cloth_joint"/>
 							<site name="site2_left" pos="0.017 0.18 0.0"/>
 							<site name="site2_right" pos="-0.017 0.18 0.0"/>
 							<body name="object3">
-								<geom name="geom3" size="0.01 0.3" pos="0 0.22 0" type="cylinder" rgba="1 1 1 1" group="0"/>
+								<geom name="geom3" size="0.01 0.275" pos="0 0.22 0" type="cylinder" rgba="1 1 1 1" group="0"/>
 								<joint name="joint2" pos="0 0.18 0" class="cloth_joint"/>
 								<site name="site3_left" pos="0.017 0.22 0.0"/>
 								<site name="site3_right" pos="-0.017 0.22 0.0"/>
 								<body name="object4">
-									<geom name="geom4" size="0.01 0.3" pos="0 0.26 0" type="cylinder" rgba="1 1 1 1" group="0"/>
+									<geom name="geom4" size="0.01 0.275" pos="0 0.26 0" type="cylinder" rgba="1 1 1 1" group="0"/>
 									<joint name="joint3" pos="0 0.22 0" class="cloth_joint"/>
 									<site name="site4_left" pos="0.017 0.26 0.0"/>
 									<site name="site4_right" pos="-0.017 0.26 0.0"/>
 									<body name="object5">
-										<geom name="geom5" size="0.01 0.3" pos="0 0.30 0" type="cylinder" rgba="1 1 1 1" group="0"/>
+										<geom name="geom5" size="0.01 0.275" pos="0 0.30 0" type="cylinder" rgba="1 1 1 1" group="0"/>
 										<joint name="joint4" pos="0 0.26 0" class="cloth_joint"/>
 										<site name="site5_left" pos="0.017 0.30 0.0"/>
 										<site name="site5_right" pos="-0.017 0.30 0.0"/>
-										<body name="object6">
-											<geom name="geom6" size="0.01 0.3" pos="0 0.34 0" type="cylinder" rgba="1 1 1 1" group="0"/>
-											<joint name="joint5" pos="0 0.3 0" class="cloth_joint"/>
-											<site name="site6_left" pos="0.017 0.34 0.0"/>
-											<site name="site6_right" pos="-0.017 0.34 0.0"/>
-											<body name="object7">
-												<geom name="geom7" size="0.01 0.3" pos="0 0.38 0" type="cylinder" rgba="1 1 1 1" group="0"/>
-												<joint name="joint6" pos="0 0.34 0" class="cloth_joint"/>
-												<site name="site7_left" pos="0.017 0.38 0.0"/>
-												<site name="site7_right" pos="-0.017 0.38 0.0"/>
-												<body name="object8">
-													<geom name="geom8" size="0.01 0.3" pos="0 0.42 0" type="cylinder" rgba="1 1 1 1" group="0"/>
-													<joint name="joint7" pos="0 0.38 0" class="cloth_joint"/>
-													<site name="site8_left" pos="0.017 0.42 0.0"/>
-													<site name="site8_right" pos="-0.017 0.42 0.0"/>
-													<body name="object9">
-														<geom name="geom9" size="0.01 0.3" pos="0 0.46 0" type="cylinder" rgba="1 1 1 1" group="0"/>
-														<joint name="joint8" pos="0 0.42 0" class="cloth_joint"/>
-														<site name="site9_left" pos="0.017 0.46 0.0"/>
-														<site name="site9_right" pos="-0.017 0.46 0.0"/>
-														<body name="object10">
-															<geom name="geom10" size="0.01 0.3" pos="0 0.50 0" type="cylinder" rgba="1 1 1 1" group="0"/>
-															<joint name="joint9" pos="0 0.46 0" class="cloth_joint"/>	
-															<site name="site10_left" pos="0.017 0.50 0.0"/>
-															<site name="site10_right" pos="-0.017 0.50 0.0"/>
-															<body name="object11">
-																<geom name="geom11" size="0.01 0.3" pos="0 0.54 0" type="cylinder" rgba="1 1 1 1" group="0"/>
-																<joint name="joint10" pos="0 0.5 0" class="cloth_joint"/>	
-																<site name="site11_left" pos="0.017 0.54 0.0"/>
-																<site name="site11_right" pos="-0.017 0.54 0.0"/>
-															</body>
-														</body>
-													</body>
-												</body>
-											</body>
-										</body>
 									</body>
 								</body>
 							</body>
@@ -100,7 +64,7 @@
         <torque name="torque_ee" site="ft_frame"/>
     </sensor>
     <tendon>
-    	<spatial name="tendon1" stiffness="100" damping="100" frictionloss="3">
+    	<spatial name="tendon1" stiffness="1" damping="1" frictionloss="3">
 			<site site="anchor_left"/> 
 			<geom geom="geom0" sidesite="gripper0_site0_left"/>
 			<site site="site1_left"/>
@@ -108,27 +72,15 @@
 			<site site="site3_left"/>
 			<geom geom="geom4" sidesite="gripper0_site4_left"/>
 			<site site="site5_left"/>
-			<geom geom="geom6" sidesite="gripper0_site6_left"/>
-			<site site="site7_left"/>
-			<geom geom="geom8" sidesite="gripper0_site8_left"/>
-			<site site="site9_left"/>
-			<geom geom="geom10" sidesite="gripper0_site10_left"/>
-			<site site="site11_left"/>
 		</spatial>
-		<spatial name="tendon2" stiffness="100" damping="100" frictionloss="3">
+		<spatial name="tendon2" stiffness="1" damping="1" frictionloss="3">
 			<site site="anchor_left"/>
 			<geom geom="geom1" sidesite="gripper0_site1_left"/>
 			<site site="site2_left"/>
 			<geom geom="geom3" sidesite="gripper0_site3_left"/>
 			<site site="site4_left"/>
-			<geom geom="geom5" sidesite="gripper0_site5_left"/>
-			<site site="site6_left"/>
-			<geom geom="geom7" sidesite="gripper0_site7_left"/>
-			<site site="site8_left"/>
-			<geom geom="geom9" sidesite="gripper0_site9_left"/>
-			<site site="site10_left"/>
 		</spatial>
-		<spatial name="tendon3" stiffness="100" damping="100" frictionloss="3">
+		<spatial name="tendon3" stiffness="1" damping="1" frictionloss="3">
 			<site site="anchor_right"/> 
 			<geom geom="geom0" sidesite="gripper0_site0_right"/>
 			<site site="site1_right"/>
@@ -136,25 +88,13 @@
 			<site site="site3_right"/>
 			<geom geom="geom4" sidesite="gripper0_site4_right"/>
 			<site site="site5_right"/>
-			<geom geom="geom6" sidesite="gripper0_site6_right"/>
-			<site site="site7_right"/>
-			<geom geom="geom8" sidesite="gripper0_site8_right"/>
-			<site site="site9_right"/>
-			<geom geom="geom10" sidesite="gripper0_site10_right"/>
-			<site site="site11_right"/>
 		</spatial>
-		<spatial name="tendon4" stiffness="100" damping="100" frictionloss="3">
+		<spatial name="tendon4" stiffness="1" damping="1" frictionloss="3">
 			<site site="anchor_right"/>
 			<geom geom="geom1" sidesite="gripper0_site1_right"/>
 			<site site="site2_right"/>
 			<geom geom="geom3" sidesite="gripper0_site3_right"/>
 			<site site="site4_right"/>
-			<geom geom="geom5" sidesite="gripper0_site5_right"/>
-			<site site="site6_right"/>
-			<geom geom="geom7" sidesite="gripper0_site7_right"/>
-			<site site="site8_right"/>
-			<geom geom="geom9" sidesite="gripper0_site9_right"/>
-			<site site="site10_right"/>
 		</spatial>
 	</tendon>
 </mujoco>
