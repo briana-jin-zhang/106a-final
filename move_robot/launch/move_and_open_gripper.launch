@@ -1,0 +1,14 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="waypoints" default="waypoints_new.npy" />
+  <arg name="control_freq" default="20" />
+
+  <!-- Move and Open Gripper when Done -->
+  <node pkg="move_robot" type="move_server.py" name="move_server"></node>
+  <node pkg="robotiq_2f_gripper_control" type="Robotiq2FGripperRtuNode.py" name="Robotiq2FGripperRtuNode" args="/dev/ttyUSB0"></node>
+  <node pkg="move_robot" type="move_and_open_gripper.py" name="move_and_open_gripper" output="screen" required="true"
+    args="
+      -w $(find move_robot)/src/$(arg waypoints)
+      -c $(arg control_freq)
+  "></node>
+</launch>

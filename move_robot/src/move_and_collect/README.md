@@ -2,13 +2,27 @@
 
 The `move_server.py` node starts a ROS service server that moves the arm along a given trajectory.
 
+# Move and Open Gripper
+
+Given a waypoints file, the `move_and_open_gripper.py` node will move the robot along the given trajectory, then open the gripper when the movement is complete.
+
+## Usage
+
+### With launchfile
+
+```
+roslaunch move_robot move_and_open_gripper.launch waypoints:=waypoints/waypoints.npy
+```
+
+# Move and Collect Data
+
 Given a waypoints file, the `move_and_collect.py` node handles the collection of data when executing the trajectory. More specifically, it starts collecting data at the start of the movement, stops collection of data at the end of the movement, and saves logs upon completion.
 
 Currently, raw camera output and end-effector pose can be collected.
 
-# Usage
+## Usage
 
-## With launchfile
+### With launchfile
 
 Example: Collect end-effector pose and camera data:
 
@@ -22,7 +36,7 @@ Example: Don't collect data:
 roslaunch move_robot move_and_collect.launch waypoints:=waypoints/waypoints.npy
 ```
 
-## Manual Usage
+### Manual Usage
 
 Start the `move` service:
 
