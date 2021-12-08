@@ -6,15 +6,15 @@ This directory contains scripts to process data before training / running infere
 
 `process_sim_data.py` takes in the collected cloth positions in a simulated trajectory as a numpy array of shape `(horizon, num_cloth_points, 3)` and transforms them into an array of shape `(horizon, num_cloth_points, 2)`.
 
-The outputs are saved to the same directory as the trajectory array.
+The outputs are saved to the same directory as the cloth points.
 
 ## Usage
 
-`python process_sim_data.py -d simulated_trajectories/100`
+`python process_sim_data.py -d simulated_trajectories/100 -c simulated_trajectories/100`
 
 To visualize the results as a gif, also saved in the trajectory directory:
 
-`python process_sim_data.py -d simulated_trajectories/100 --visualize`
+`python process_sim_data.py -d simulated_trajectories/100 -c simulated_trajectories/100 --visualize`
 
 
 # Parsed Video Data
