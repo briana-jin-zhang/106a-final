@@ -28,7 +28,7 @@ class IIWA(ManipulatorModel):
 
     @property
     def init_qpos(self):
-    	return np.array([0.0, 0.2, 0.0, -0.2, 0.0, 0.2, 0.0])
+    	return np.array([0.0, 0.0349066, 0.0, 0.523599, 0.0, -0.698132, 0.0])
         #return np.array([0.785398, -0.32724923, 0.000, 0.523599, 0.000, -0.698132, 0.000])
 
     @property
