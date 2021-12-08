@@ -1,4 +1,5 @@
 <mujoco model="empty_arena">
+<option density="1.2"/>
   <asset>
     <texture builtin="gradient" height="256" rgb1=".9 .9 1." rgb2=".2 .3 .4" type="skybox" width="256"/>
     <texture file="../textures/wood-tiles.png" type="2d" name="texplane"/>
