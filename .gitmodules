@@ -1,0 +1,3 @@
+[submodule "ArUCo-Markers-Pose-Estimation-Generation-Python"]
+	path = ArUCo-Markers-Pose-Estimation-Generation-Python
+	url = https://github.com/briana-jin-zhang/ArUCo-Markers-Pose-Estimation-Generation-Python.git
